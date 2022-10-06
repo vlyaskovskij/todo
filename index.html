@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Подключаем стили проекта -->
+    <link rel="stylesheet" href="css/app.min.css" />
+  </head>
+
+  <body>
+    <h1 class="title">Daily Planner</h1>
+    <div class="container">
+      <div class="tasks">
+        <h2 class="subtitle">3 Tasks</h2>
+        <div class="tasks-items">
+          <div class="tasks-item">
+            <div class="tasks-item-wrapper">
+              <buttton class="tasks-item__btn"></buttton>
+              <input
+                type="text"
+                size="40"
+                class="tasks__input"
+                oninput="saveTask()"
+                placeholder="First task"
+              />
+            </div>
+          </div>
+          <div class="tasks-item">
+            <div class="tasks-item-wrapper">
+              <buttton class="tasks-item__btn"></buttton>
+              <input
+                type="text"
+                size="40"
+                class="tasks__input"
+                oninput="saveTask()"
+                placeholder="Second task"
+              />
+            </div>
+          </div>
+          <div class="tasks-item">
+            <div class="tasks-item-wrapper">
+              <buttton class="tasks-item__btn"></buttton>
+              <input
+                type="text"
+                size="40"
+                class="tasks__input"
+                oninput="saveTask()"
+                placeholder="Third task"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tasks">
+        <h2 class="subtitle">HABITS</h2>
+        <div class="habits-items"></div>
+        <buttton class="addhabit">
+          <img src="img/dest/plus.png" alt="plus" />
+        </buttton>
+      </div>
+    </div>
+    <!-- Подключаем скрипты проекта -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
