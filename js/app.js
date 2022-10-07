@@ -6,9 +6,15 @@ let howmany = localStorage.getItem("howm");
 // Рендерим привычки
 for (let i = 0; i < howmany; i++) {
   renderStart();
-  const inputHabit = document.querySelectorAll(".habit__input");
+  let inputHabit = document.querySelectorAll(".habit__input");
+  let Habit = document.querySelectorAll(".habit-item-wrapper");
+
   for (i = 0; i < inputHabit.length; i++) {
     inputHabit[i].value = localStorage.getItem(`habit${i}`);
+    if (inputHabit[i].value === "") {
+      Habit[i].remove();
+      howmany--;
+    }
   }
 }
 
@@ -57,10 +63,8 @@ function getinput() {
 
 // Получаем дату прошлого входа
 let dateCheck = localStorage.getItem("datecheck");
-console.log(localStorage.getItem("datecheck"));
 // Получаем дату которая сейчас
 let dateNow = new Date().toLocaleDateString();
-console.log(dateNow);
 // Проверяем совпадают ли даты
 if (dateNow !== dateCheck) {
   for (i = 0; i < inputTask.length; i++) {
